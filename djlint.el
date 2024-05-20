@@ -163,6 +163,7 @@ https://www.gnu.org/software/emacs/manual/html_node/flymake/An-annotated-example
       (process-send-region djlint--flymake-proc (point-min) (point-max))
       (process-send-eof djlint--flymake-proc))))
 
+;;;###autoload
 (defun djlint-setup-flymake-backend ()
   "Add `djlint' flymake backend to `flymake-diagnostic-functions'."
   (add-hook 'flymake-diagnostic-functions 'djlint-flymake nil t))
