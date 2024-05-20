@@ -1,0 +1,31 @@
+#+TITLE: djLint
+
+#+BEGIN_SRC emacs-lisp
+(use-package djlint
+  :ensure t
+  :hooks
+  (html-mode . djlint-mode))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+(use-package djlint
+  :ensure t
+  :hooks
+  (html-mode . eldoc-mode)
+  (html-mode . flymake-mode)
+  ;; python env activation may be necessary to get the correct `djlint-program'
+  ;; path before activating `flymake-mode'.
+  (html-mode . djlint-setup-flymake-backend)
+  (html-mode . djlint-format-on-save-mode))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+((html-mode . ((mode . djlint-mode))))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+((html-mode . ((mode . djlint-format-on-save)
+               (eval . (djlint-setup-flymake-backend))
+               (mode . flymake)
+               (mode . eldoc))))
+#+END_SRC
