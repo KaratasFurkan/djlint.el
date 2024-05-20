@@ -67,7 +67,7 @@
 ;;;###autoload (autoload 'djlint-format-region "djlint" nil t)
 ;;;###autoload (autoload 'djlint-format-on-save-mode "djlint" nil t)
 (reformatter-define djlint-format
-  :group djlint
+  :group 'djlint
   :program djlint-program
   :args djlint-formatter-args)
 
