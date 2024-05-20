@@ -1,5 +1,10 @@
 #+TITLE: djLint
 
+TODOs:
+- [ ] Write a proper README
+- [ ] Publish on MELPA
+- [ ] Add this package to https://github.com/djlint/djLint/blob/master/docs/src/docs/integrations.md
+
 #+BEGIN_SRC emacs-lisp
 (use-package djlint
   :ensure t
